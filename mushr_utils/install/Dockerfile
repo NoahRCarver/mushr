@@ -4,6 +4,8 @@ MAINTAINER Matt Schmittle <schmttle@cs.washington.edu>
 ARG DEBIAN_FRONTEND=noninteractive
 WORKDIR /root
 
+ENV XDG_RUNTIME_DIR=/run/user/0
+
 # Install docker deps for mushr_install 
 RUN apt-get update -y \
     && apt-get install keyboard-configuration apt-utils gnupg2 curl -y \
